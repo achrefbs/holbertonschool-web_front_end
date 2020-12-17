@@ -1,0 +1,17 @@
+/*
+assigns:
+Margin left and right at 10px to body tags
+Margin left and right at 15px to div tags
+*/
+
+@mixin add_margin($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+body {
+    @include add_margin(10px);
+}
+
+div {
+    @include add_margin(15px);
+}
