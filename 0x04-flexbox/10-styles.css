@@ -371,14 +371,15 @@
     min-height: 50vh;
   }
   
-  .section-body .section-hero {
-    padding : 10rem 4rem;
+  .section-hero .section-body {
+    padding: 10rem 4rem;
+}
+
+  .section-hero .section-category {
+      color: var(--color-white);
+      text-transform: uppercase;
   }
 
-  .section-category .section-hero {
-    color : var(--color-white);
-    text-transform: uppercase;
-  }
   /* Section Latest news ============================= */
 
   .section-latest-news .row {
