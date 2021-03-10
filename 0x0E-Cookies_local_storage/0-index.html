@@ -11,7 +11,7 @@
     <form action="">
       <input id="firstname" type="text" placeholder="Firstname" />
       <input id="email" type="text" placeholder="Email" />
-      <button onclick="setCookies()">log me in</button>
+      <button onclick="setCookies()">Log me in”</button>
     </form>
 
     <h1>Cookies</h1>
@@ -20,15 +20,16 @@
 
     <script type="application/javascript">
       const setCookies = () => {
-        const firstName = document.getElementById("firstname");
-        const email = document.getElementById("email");
-        document.cookie = `firstname=${firstName.value};`;
-        document.cookie = `email=${email.value};`;
+        // event.preventDefault();
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+        document.cookie = `firstname=${firstname};`;
+        document.cookie = `email=${email};`;
       };
 
       const showCookies = () => {
         const element = document.createElement("p");
-        element.innerHTML = `Cookies:${document.cookie}`;
+        element.innerHTML = `Cookies: ${document.cookie}`;
         document.querySelector("body").append(element);
       };
     </script>
