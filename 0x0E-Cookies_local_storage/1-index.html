@@ -20,10 +20,13 @@
 
     <script type="application/javascript">
       const setCookies = () => {
+        var d = new Date();
+        d.setTime(d.getTime() + (10*24*60*60*1000));
         const firstname = document.getElementById("firstname").value;
         const email = document.getElementById("email").value;
         document.cookie = `firstname=${firstname};`;
         document.cookie = `email=${email};`;
+        document.cookie = `expires=${d.toGMTString()};`;
       };
 
       const showCookies = () => {
